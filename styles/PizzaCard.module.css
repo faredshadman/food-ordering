@@ -1,0 +1,43 @@
+.container {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  transition: all 0.5s ease;
+}
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d1411e;
+}
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+}
+.desc {
+  text-align: center;
+  color: #777;
+}
+.container:hover {
+  border-radius: 20px;
+  background-color: rgba(153, 153, 153, 0.541);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.container:hover :is(.price, .desc) {
+  color: #d1411e;
+}
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .price,
+  .desc {
+    font-size: 1.5rem;
+  }
+}
